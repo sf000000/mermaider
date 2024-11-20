@@ -1,0 +1,84 @@
+{
+  "templates": [
+    {
+      "id": "flowchart",
+      "name": "Flowchart",
+      "code": "graph TD\n    A[Start] --> B{Decision}\n    B -->|Yes| C[Do something]\n    B -->|No| D[Do something else]\n    C --> E[End]\n    D --> E"
+    },
+    {
+      "id": "sequence",
+      "name": "Sequence Diagram",
+      "code": "sequenceDiagram\n    participant Alice\n    participant Bob\n    Alice->>Bob: Hello Bob, how are you?\n    Bob-->>Alice: I am fine, thanks!\n    Alice->>Bob: Great to hear!"
+    },
+    {
+      "id": "gantt",
+      "name": "Gantt Chart",
+      "code": "gantt\n    title Project Timeline\n    dateFormat  YYYY-MM-DD\n    section Planning\n    Task 1      :a1, 2024-01-01, 10d\n    Task 2      :after a1, 15d\n    section Execution\n    Task 3      :2024-01-25, 20d\n    Task 4      :2024-02-15, 10d"
+    },
+    {
+      "id": "class",
+      "name": "Class Diagram",
+      "code": "classDiagram\n    class Animal {\n      +String name\n      +int age\n      +void makeSound()\n    }\n    class Dog {\n      +String breed\n      +void fetch()\n    }\n    Animal <|-- Dog"
+    },
+    {
+      "id": "state",
+      "name": "State Diagram",
+      "code": "stateDiagram\n    [*] --> Idle\n    Idle --> Processing: Start\n    Processing --> Success: Process Complete\n    Processing --> Failure: Error\n    Success --> [*]\n    Failure --> [*]"
+    },
+    {
+      "id": "pie",
+      "name": "Pie Chart",
+      "code": "pie\n    title Distribution of Fruit\n    \"Apple\" : 40\n    \"Banana\" : 25\n    \"Cherry\" : 35"
+    },
+    {
+      "id": "journey",
+      "name": "User Journey",
+      "code": "journey\n    title User Journey for Online Shopping\n    section Start\n      User visits website: 5: Happy\n    section Browse\n      User browses products: 3: Neutral\n    section Checkout\n      User adds items to cart: 4: Excited\n      User completes payment: 5: Satisfied"
+    },
+    {
+      "id": "mindmap",
+      "name": "Mindmap",
+      "code": "mindmap\n  root((Central Idea))\n    Sub-topic 1\n      Sub-sub-topic 1.1\n      Sub-sub-topic 1.2\n    Sub-topic 2\n      Sub-sub-topic 2.1\n      Sub-sub-topic 2.2"
+    },
+    {
+      "id": "timeline",
+      "name": "Timeline",
+      "code": "timeline\n    title Evolution of Technology\n    2000 : Birth of smartphones\n    2010 : Rise of social media\n    2020 : AI advancements"
+    },
+    {
+      "id": "quadrantChart",
+      "name": "Quadrant Chart",
+      "code": "quadrantChart\n    title Reach and engagement of campaigns\n    x-axis Low Reach --> High Reach\n    y-axis Low Engagement --> High Engagement\n    quadrant-1 We should expand\n    quadrant-2 Need to promote\n    quadrant-3 Re-evaluate\n    quadrant-4 May be improved\n    Campaign A: [0.3, 0.6]\n    Campaign B: [0.45, 0.23]\n    Campaign C: [0.57, 0.69]\n    Campaign D: [0.78, 0.34]\n    Campaign E: [0.40, 0.34]\n    Campaign F: [0.35, 0.78]"
+    },
+    {
+      "id": "gitgraph",
+      "name": "Gitgraph Diagram",
+      "code": "gitGraph\n    commit\n    branch develop\n    checkout develop\n    commit\n    commit\n    checkout main\n    merge develop\n    commit\n    commit"
+    },
+    {
+      "id": "c4",
+      "name": "C4 Diagram",
+      "code": "C4Context\n      title System Context diagram for Internet Banking System\n      Enterprise_Boundary(b0, \"BankBoundary0\") {\n        Person(customerA, \"Banking Customer A\", \"A customer of the bank, with personal bank accounts.\")\n        Person(customerB, \"Banking Customer B\")\n        Person_Ext(customerC, \"Banking Customer C\", \"desc\")\n\n        Person(customerD, \"Banking Customer D\", \"A customer of the bank, <br/> with personal bank accounts.\")\n\n        System(SystemAA, \"Internet Banking System\", \"Allows customers to view information about their bank accounts, and make payments.\")\n\n        Enterprise_Boundary(b1, \"BankBoundary\") {\n\n          SystemDb_Ext(SystemE, \"Mainframe Banking System\", \"Stores all of the core banking information about customers, accounts, transactions, etc.\")\n\n          System_Boundary(b2, \"BankBoundary2\") {\n            System(SystemA, \"Banking System A\")\n            System(SystemB, \"Banking System B\", \"A system of the bank, with personal bank accounts. next line.\")\n          }\n\n          System_Ext(SystemC, \"E-mail system\", \"The internal Microsoft Exchange e-mail system.\")\n          SystemDb(SystemD, \"Banking System D Database\", \"A system of the bank, with personal bank accounts.\")\n\n          Boundary(b3, \"BankBoundary3\", \"boundary\") {\n            SystemQueue(SystemF, \"Banking System F Queue\", \"A system of the bank.\")\n            SystemQueue_Ext(SystemG, \"Banking System G Queue\", \"A system of the bank, with personal bank accounts.\")\n          }\n        }\n      }\n\n      BiRel(customerA, SystemAA, \"Uses\")\n      BiRel(SystemAA, SystemE, \"Uses\")\n      Rel(SystemAA, SystemC, \"Sends e-mails\", \"SMTP\")\n      Rel(SystemC, customerA, \"Sends e-mails to\")\n\n      UpdateElementStyle(customerA, $fontColor=\"red\", $bgColor=\"grey\", $borderColor=\"red\")\n      UpdateRelStyle(customerA, SystemAA, $textColor=\"blue\", $lineColor=\"blue\", $offsetX=\"5\")\n      UpdateRelStyle(SystemAA, SystemE, $textColor=\"blue\", $lineColor=\"blue\", $offsetY=\"-10\")\n      UpdateRelStyle(SystemAA, SystemC, $textColor=\"blue\", $lineColor=\"blue\", $offsetY=\"-40\", $offsetX=\"-50\")\n      UpdateRelStyle(SystemC, customerA, $textColor=\"red\", $lineColor=\"red\", $offsetX=\"-50\", $offsetY=\"20\")\n\n      UpdateLayoutConfig($c4ShapeInRow=\"3\", $c4BoundaryInRow=\"1\")"
+    },
+    {
+      "id": "xychart",
+      "name": "XY Chart",
+      "code": "xychart-beta\n    title \"Sales Revenue\"\n    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]\n    y-axis \"Revenue (in $)\" 4000 --> 11000\n    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]\n    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]"
+    },
+    {
+      "id": "packet",
+      "name": "Packet Diagram",
+      "code": "packet-beta\n0-15: \"Source Port\"\n16-31: \"Destination Port\"\n32-63: \"Sequence Number\"\n64-95: \"Acknowledgment Number\"\n96-99: \"Data Offset\"\n100-105: \"Reserved\"\n106: \"URG\"\n107: \"ACK\"\n108: \"PSH\"\n109: \"RST\"\n110: \"SYN\"\n111: \"FIN\"\n112-127: \"Window\"\n128-143: \"Checksum\"\n144-159: \"Urgent Pointer\"\n160-191: \"(Options and Padding)\"\n192-255: \"Data (variable length)\""
+    },
+    {
+      "id": "kanban",
+      "name": "Kanban Diagram",
+      "code": "kanban\n  Todo\n    [Create Documentation]\n    docs[Create Blog about the new diagram]\n  [In progress]\n    id6[Create renderer so that it works in all cases. We also add som extra text here for testing purposes. And some more just for the extra flare.]\n  id9[Ready for deploy]\n    id8[Design grammar]@{ assigned: 'knsv' }\n  id10[Ready for test]\n    id4[Create parsing tests]@{ ticket: MC-2038, assigned: 'K.Sveidqvist', priority: 'High' }\n    id66[last item]@{ priority: 'Very Low', assigned: 'knsv' }\n  id11[Done]\n    id5[define getData]\n    id2[Title of diagram is more than 100 chars when user duplicates diagram with 100 char]@{ ticket: MC-2036, priority: 'Very High'}\n    id3[Update DB function]@{ ticket: MC-2037, assigned: knsv, priority: 'High' }\n\n  id12[Can't reproduce]\n    id3[Weird flickering in Firefox]"
+    },
+    {
+      "id": "er",
+      "name": "Entity Relationship",
+      "code": "erDiagram\n    CUSTOMER ||--o{ ORDER : places\n    ORDER ||--|{ LINE-ITEM : contains\n    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses\n    CUSTOMER {\n        string name\n        string custNumber\n        string sector\n    }\n    ORDER {\n        int orderNumber PK\n        string deliveryAddress\n        date orderDate\n    }\n    LINE-ITEM {\n        string productCode\n        int quantity\n        float pricePerUnit\n    }\n    DELIVERY-ADDRESS {\n        string address PK\n        boolean isDefault\n        string type\n    }"
+    }
+  ]
+}
